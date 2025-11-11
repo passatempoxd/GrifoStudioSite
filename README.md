@@ -10,7 +10,7 @@ A página foi desenhada com uma forte identidade visual (usando a paleta de core
 
 ###  Visualização
 
-![[Preview da Landing Page da Grifo](URL_DA_SUA_IMAGEM.jpg)](https://grifo-studio-site.vercel.app/#contato)
+![Uploading Grifo site (2).png…]()
 
 ##  Seções Principais
 
