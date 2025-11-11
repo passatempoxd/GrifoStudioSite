@@ -1,228 +1,236 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="globals.css" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="grifo-site" data-model-id="1:2">
-      <div class="rectangle"></div>
-      <div class="div"></div>
-      <div class="rectangle-2"></div>
-      <img class="img" src="https://c.animaapp.com/OLJuCHk9/img/rectangle-9162.svg" />
-      <div class="rectangle-3"></div>
-      <p class="transforme-sua">
-        <span class="text-wrapper">Transforme&nbsp;&nbsp;</span>
-        <span class="span">sua presença&nbsp;&nbsp;digital com&nbsp;&nbsp;conteúdos poderosos</span>
-      </p>
-      <img class="line" src="https://c.animaapp.com/OLJuCHk9/img/line-6.svg" />
-      <p class="p">Acelere o crescimento da sua marca com estratégias de conteúdo lendárias para redes sociais.</p>
-      <div class="group"></div>
-      <div class="group-2">
-        <p class="text-wrapper-2">Por que escolher o Grifo Studio?</p>
-        <div class="text-wrapper-3">Nossos Compromissos</div>
-      </div>
-      <div class="group-3">
-        <div class="rectangle-4"></div>
-        <div class="frame-wrapper">
-          <div class="frame">
-            <div class="text-wrapper-4">Prazo afiado</div>
-            <p class="text-wrapper-5">Trabalhamos com rapidez e eficiência</p>
-          </div>
-        </div>
-        <img class="vector" src="https://c.animaapp.com/OLJuCHk9/img/vector.svg" />
-      </div>
-      <div class="group-4">
-        <div class="rectangle-5"></div>
-        <div class="group-wrapper">
-          <div class="div-wrapper">
-            <div class="frame-2">
-              <div class="text-wrapper-6">Qualidade em cada detalhe</div>
-              <p class="text-wrapper-7">Temos zelo para que a sua marca seja única no mercado</p>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grifo Studio</title>
+
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&family=Inter:wght@400;500;600;700&family=Manuale:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container container-header">
+            
+            <img src="logo-grifo.svg" alt="Grifo Studio Logo" class="logo">
+            
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <div class="search-bar">
+                <img src="search.svg" alt="Pesquisar">
+                <input type="text" placeholder="Pesquise algo...">
             </div>
-          </div>
         </div>
-        <img class="vector-2" src="https://c.animaapp.com/OLJuCHk9/img/vector-1.svg" />
-      </div>
-      <div class="group-5">
-        <div class="rectangle-5"></div>
-        <div class="frame-wrapper">
-          <div class="frame-2">
-            <div class="text-wrapper-8">Autenticidade</div>
-            <p class="text-wrapper-9">Sua marca com uma identidade marcante como uma lenda</p>
-          </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container container-hero">
+                <div class="hero-text">
+                    <h1>
+                        <span class="italic-800">Transforme </span>
+                        <span class="italic-600">sua presença digital com conteúdos poderosos</span>
+                    </h1>
+                    <div class="divider"></div>
+                    <p>Acelere o crescimento da sua marca com estratégias de conteúdo lendárias para redes sociais.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="hero-image.png" alt="Protótipo de app em um celular">
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-nos" class="sobre-nos">
+            <div class="container container-sobre">
+                <div class="sobre-text">
+                    <h2>SOBRE NÓS</h2>
+                    <span class="subtitle">No Grifo Studio,</span>
+                    <h3>Criamos conteúdos que falam a língua da sua audiência!</h3>
+                    <p>Sabemos que a atenção nas redes socias é valiosa e, por isso, nossa equipe se dedica a desenvolver posts, vídeos e conexões reais com a sua marca. Nossa abordagem é criativa, estratégica e orientada por resultados.</p>
+                    <a href="#contato" class="btn-primary">Saiba mais</a>
+                </div>
+                <div class="sobre-image">
+                    <img src="sobre-image.png" alt="Studio Grifo Logo Grande">
+                </div>
+            </div>
+        </section>
+
+        <section id="compromissos" class="compromissos">
+            <div class="container container-compromissos">
+                <div class="compromissos-image">
+                    <img src="grifo-estatua.png" alt="Estátua de um Grifo">
+                </div>
+                <div class="compromissos-list">
+                    <span class="subtitle">Por que escolher o Grifo Studio?</span>
+                    <h2>Nossos Compromissos</h2>
+                    
+                    <ul>
+                        <li>
+                            <div class="icon-box"><img src="icon-prazo.svg" alt="Ícone Prazo"></div>
+                            <div class="item-text">
+                                <h4>Prazo afiado</h4>
+                                <p>Trabalhamos com rapidez e eficiência</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><img src="icon-qualidade.svg" alt="Ícone Qualidade"></div>
+                            <div class="item-text">
+                                <h4>Qualidade em cada detalhe</h4>
+                                <p>Temos zelo para que a sua marca seja única no mercado</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><img src="icon-autenticidade.svg" alt="Ícone Autenticidade"></div>
+                            <div class="item-text">
+                                <h4>Autenticidade</h4>
+                                <p>Sua marca com uma identidade marcante como uma lenda</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="projetos">
+            <div class="container">
+                <h2>NOSSOS PROJETOS LENDÁRIOS</h2>
+                <div class="gallery-grid">
+                    <img src="images/projeto1.jpg" alt="Projeto 1">
+                    <img src="images/projeto2.jpg" alt="Projeto 2">
+                    <img src="images/projeto3.jpg" alt="Projeto 3">
+                    <img src="images/projeto4.jpg" alt="Projeto 4">
+                    <img src="images/projeto5.jpg" alt="Projeto 5">
+                    <img src="images/projeto6.jpg" alt="Projeto 6">
+                    <img src="images/projeto7.jpg" alt="Projeto 7">
+                    <img src="images/projeto8.jpg" alt="Projeto 8">
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato">
+            <div class="container container-contato">
+                <div class="contato-info">
+                    <h2>FORMULÁRIO DE CONTATO</h2>
+                    <ul>
+                        <li>
+                            <div class="icon-box-contato"><img src="icon-praticidade.svg" alt="Ícone Praticidade"></div>
+                            <div class="item-text">
+                                <h4>Praticidade</h4>
+                                <p>Preencha o formulário ao lado para agendar uma <strong>consultoria gratuita</strong>.</p>
+                            </div>
+                        </li>
+                         <li>
+                            <div class="icon-box-contato"><img src="icon-agilidade.svg" alt="Ícone Agilidade"></div>
+                            <div class="item-text">
+                                <h4>Agilidade</h4>
+                                <p>Receberá o retorno da solicitação em <strong>menos de 24 horas</strong> para criar um plano personalizado para a sua marca.</p>
+                            </div>
+                        </li>
+                         <li>
+                            <div class="icon-box-contato"><img src="icon-vantagens.svg" alt="Ícone Vantagens"></div>
+                            <div class="item-text">
+                                <h4>Vantagens exclusivas</h4>
+                                <p>Nossa equipe se dispõe a tornar a sua marca em um projeto lendário.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contato-form">
+                    <form action="https://formspree.io/f/SEU-ID-AQUI" method="POST">
+                        <div class="form-group">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" placeholder="digite o seu nome" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="email">E-mail profissional *</label>
+                            <input type="email" id="email" name="email" placeholder="digite o seu melhor e-mail" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="telefone">Telefone *</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="digite um telefone para contato" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="empresa">Empresa e cargo *</label>
+                            <input type="text" id="empresa" name="empresa" placeholder="digite para qual empresa é o projeto e qual o seu cargo" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="objetivo">Objetivo do contato *</label>
+                            <input type="text" id="objetivo" name="objetivo" placeholder="Novo projeto" required>
+                        </div>
+                        <button type="submit" class="btn-submit">ENVIAR</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container container-footer">
+            <div class="footer-col-1">
+                <img src="logo-grifo-branco.svg" alt="Grifo Studio Logo" class="logo-footer">
+                <p>Fortalecendo a comunicação visual de nossos clientes por meio de soluções criativas que transcendem o convencional.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="icon-facebook.svg" alt="Facebook"></a>
+                    <a href="#"><img src="icon-instagram.svg" alt="Instagram"></a>
+                    <a href="#"><img src="icon-linkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#sobre-nos">Sobre nós</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Instagram</h4>
+                <div class="instagram-grid">
+                    <img src="images/insta1.jpg" alt="Insta 1">
+                    <img src="images/insta2.jpg" alt="Insta 2">
+                    <img src="images/insta3.jpg" alt="Insta 3">
+                    <img src="images/insta4.jpg" alt="Insta 4">
+                    <img src="images/insta5.jpg" alt="Insta 5">
+                    <img src="images/insta6.jpg" alt="Insta 6">
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contatos</h4>
+                <ul>
+                    <li>
+                        <img src="icon-local.svg" alt="Localização">
+                        <span>Fatec Carapicuíba</span>
+                    </li>
+                     <li>
+                        <img src="icon-email.svg" alt="Email">
+                        <span>grifostudio@outlook.com</span>
+                    </li>
+                     <li>
+                        <img src="icon-insta-contato.svg" alt="Instagram">
+                        <span>@studio_grifo</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <img class="vector-3" src="https://c.animaapp.com/OLJuCHk9/img/vector-2.svg" />
-      </div>
-      <img class="group-6" src="https://c.animaapp.com/OLJuCHk9/img/group-1000008974.png" />
-      <div class="sobre-n-s">SOBRE NÓS</div>
-      <div class="rectangle-6"></div>
-      <div class="text-wrapper-10">No Grifo Studio,</div>
-      <p class="text-wrapper-11">Criamos conteúdos que falam a língua da sua audiência!</p>
-      <p class="text-wrapper-12">
-        Sabemos que a atenção nas redes socias é valiosa e, por isso, nossa equipe se dedica a desenvolver posts, vídeos
-        e conexões reais com a sua marca. Nossa abordagem é criativa, estratégica e orientada por resultados.
-      </p>
-      <img class="element" src="https://c.animaapp.com/OLJuCHk9/img/1-9.png" />
-      <div class="rectangle-7"></div>
-      <div class="rectangle-8"></div>
-      <img class="element-2" src="https://c.animaapp.com/OLJuCHk9/img/5-1.png" />
-      <div class="text-wrapper-13">Saiba mais</div>
-      <div class="text-wrapper-14">ENVIAR</div>
-      <div class="group-7">
-        <div class="fundo-bege"></div>
-        <img class="olho-fundo" src="https://c.animaapp.com/OLJuCHk9/img/olho-fundo.png" />
-        <div class="overlap-group">
-          <img class="livros-roxo" src="https://c.animaapp.com/OLJuCHk9/img/livros-roxo-1.png" />
+        <div class="footer-bottom">
+            <p>Grifo Studio ©2025 all right reserve</p>
         </div>
-        <div class="livros-azul">
-          <img class="gostou-do-contedo" src="https://c.animaapp.com/OLJuCHk9/img/gostou-do-conte-do--1.png" />
-          <img class="element-3" src="https://c.animaapp.com/OLJuCHk9/img/453346734574353453-1-1.png" />
-          <img class="capa" src="https://c.animaapp.com/OLJuCHk9/img/capa--1--1.png" />
-          <img class="desenvolvimento" src="https://c.animaapp.com/OLJuCHk9/img/desenvolvimento--1--2.png" />
-          <img class="desenvolvimento-2" src="https://c.animaapp.com/OLJuCHk9/img/desenvolvimento--1--3.png" />
-        </div>
-        <img class="logo-grifo-preto" src="https://c.animaapp.com/OLJuCHk9/img/logo-grifo-preto@2x.png" />
-        <img class="fundo-papel" src="https://c.animaapp.com/OLJuCHk9/img/fundo-papel-1@2x.png" />
-        <div class="fundo-bege"></div>
-        <img class="olho-fundo" src="https://c.animaapp.com/OLJuCHk9/img/olho-fundo-1.png" />
-        <div class="livros-azul">
-          <img class="gostou-do-contedo" src="https://c.animaapp.com/OLJuCHk9/img/gostou-do-conte-do--1.png" />
-          <img class="element-3" src="https://c.animaapp.com/OLJuCHk9/img/453346734574353453-1-1.png" />
-          <img class="capa" src="https://c.animaapp.com/OLJuCHk9/img/capa--1--1.png" />
-          <img class="desenvolvimento" src="https://c.animaapp.com/OLJuCHk9/img/desenvolvimento--1--2.png" />
-          <img class="desenvolvimento-2" src="https://c.animaapp.com/OLJuCHk9/img/desenvolvimento--1--3.png" />
-        </div>
-        <img class="fundo-papel" src="https://c.animaapp.com/OLJuCHk9/img/fundo-papel-1@2x.png" />
-        <div class="nossos-projetos-lend">NOSSOS PROJETOS LENDÁRIOS</div>
-      </div>
-      <img class="logo-grifo-preto-2" src="https://c.animaapp.com/OLJuCHk9/img/logo-grifo-preto-1@2x.png" />
-      <div class="group-8">
-        <div class="rectangle-9"></div>
-        <p class="text-wrapper-15">Grifo Studio ©2025 all right reserve</p>
-        <p class="fortalecendo-a">
-          <span class="text-wrapper-16"
-            >Fortalecendo a comunicação visual de nossos clientes por meio de soluções criativas que transcendem o
-            convencional, visando trazer personalidade a suas marcas.<br
-          /></span>
-          <span class="text-wrapper-17"></span>
-        </p>
-        <div class="text-wrapper-18">Serviços</div>
-        <div class="text-wrapper-19">Instagram</div>
-        <div class="text-wrapper-20">Contatos</div>
-        <div class="text-wrapper-21">Sobre nós</div>
-        <div class="text-wrapper-22">Início</div>
-        <div class="text-wrapper-23">Portfólio</div>
-        <div class="text-wrapper-24">Contato</div>
-        <img class="group-9" src="https://c.animaapp.com/OLJuCHk9/img/group-84@2x.png" />
-        <div class="group-10">
-          <img class="maps-and-flags" src="https://c.animaapp.com/OLJuCHk9/img/maps-and-flags-7@2x.png" />
-          <div class="text-wrapper-25">Fatec Carapicuíba</div>
-        </div>
-        <div class="group-11">
-          <img class="maps-and-flags" src="https://c.animaapp.com/OLJuCHk9/img/maps-and-flags-9@2x.png" />
-          <div class="text-wrapper-26">grifostudio@outlook.com</div>
-        </div>
-        <img class="redes-sociais" src="https://c.animaapp.com/OLJuCHk9/img/redes-sociais@2x.png" />
-        <img class="element-4" src="https://c.animaapp.com/OLJuCHk9/img/1-10@2x.png" />
-        <img class="element-5" src="https://c.animaapp.com/OLJuCHk9/img/5-2@2x.png" />
-        <img class="element-6" src="https://c.animaapp.com/OLJuCHk9/img/7-1@2x.png" />
-        <img class="element-7" src="https://c.animaapp.com/OLJuCHk9/img/8-1@2x.png" />
-        <img class="element-8" src="https://c.animaapp.com/OLJuCHk9/img/9-1@2x.png" />
-        <img class="imagem-insta" src="https://c.animaapp.com/OLJuCHk9/img/imagem-insta@2x.png" />
-      </div>
-      <div class="formul-rio-de">FORMULÁRIO&nbsp;&nbsp;DE&nbsp;&nbsp;CONTATO</div>
-      <img class="group-12" src="https://c.animaapp.com/OLJuCHk9/img/group-1000008998@2x.png" />
-      <div class="group-13">
-        <p class="objetivo-do-contato">
-          <span class="text-wrapper-27">Objetivo do contato</span> <span class="text-wrapper-28"> *</span>
-        </p>
-        <div class="group-14">
-          <div class="rectangle-10"></div>
-          <div class="text-wrapper-29">Novo projeto</div>
-        </div>
-      </div>
-      <div class="group-15">
-        <p class="empresa-e-cargo">
-          <span class="text-wrapper-27">Empresa e cargo</span> <span class="text-wrapper-28"> *</span>
-        </p>
-        <div class="group-14">
-          <div class="rectangle-10"></div>
-          <p class="text-wrapper-30">digite para qual empresa é o projeto e qual o seu cargo</p>
-        </div>
-      </div>
-      <div class="group-16">
-        <p class="telefone"><span class="text-wrapper-27">Telefone </span> <span class="text-wrapper-28">*</span></p>
-        <div class="group-14">
-          <div class="rectangle-10"></div>
-          <p class="text-wrapper-31">digite um telefone para contato</p>
-        </div>
-      </div>
-      <div class="group-17">
-        <p class="e-mail-profissional">
-          <span class="text-wrapper-27">E-mail profissional </span> <span class="text-wrapper-28">*</span>
-        </p>
-        <div class="group-14">
-          <div class="rectangle-10"></div>
-          <p class="text-wrapper-29">digite o seu melhor e-mail</p>
-        </div>
-      </div>
-      <div class="group-18">
-        <p class="nome"><span class="text-wrapper-27">Nome</span> <span class="text-wrapper-32"> *</span></p>
-        <div class="group-14">
-          <div class="rectangle-10"></div>
-          <div class="text-wrapper-33">digite o seu nome</div>
-        </div>
-      </div>
-      <img class="group-19" src="https://c.animaapp.com/OLJuCHk9/img/group-1000008999@2x.png" />
-      <div class="logo">
-        <div class="text-wrapper-34">STUDIO</div>
-        <img class="layer" src="https://c.animaapp.com/OLJuCHk9/img/layer-2@2x.png" />
-      </div>
-      <img class="group-20" src="https://c.animaapp.com/OLJuCHk9/img/group-1000008997@2x.png" />
-      <div class="rectangle-11"></div>
-      <div class="rectangle-12"></div>
-      <div class="rectangle-13"></div>
-      <div class="rectangle-14"></div>
-      <div class="group-21">
-        <div class="text-wrapper-35">@studio_grifo</div>
-        <img class="vector-4" src="https://c.animaapp.com/OLJuCHk9/img/vector-3.svg" />
-      </div>
-      <div class="praticidade">
-        <div class="text-wrapper-36">Praticidade</div>
-        <p class="preencha-o-formul">
-          <span class="text-wrapper-37">Preencha o formulário ao lado para agendar uma </span>
-          <span class="text-wrapper-38">consultoria gratuita</span>
-          <span class="text-wrapper-37">.</span>
-        </p>
-      </div>
-      <div class="agilidade">
-        <div class="text-wrapper-39">Agilidade</div>
-        <p class="receber-o-retorno-da">
-          <span class="text-wrapper-37">Receberá o retorno da solicitação em </span>
-          <span class="text-wrapper-40">menos de 24 horas</span>
-          <span class="text-wrapper-37"> para criar um plano personalizado para a sua marca.</span>
-        </p>
-      </div>
-      <div class="vantagens">
-        <div class="text-wrapper-41">Vantagens exclusivas</div>
-        <p class="text-wrapper-42">Nossa equipe se dispõe a tornar a sua marca em um projeto lendário.</p>
-      </div>
-      <div class="rectangle-15"></div>
-      <div class="rectangle-16"></div>
-      <div class="rectangle-17"></div>
-      <div class="rectangle-18"></div>
-      <div class="text-wrapper-43">Início</div>
-      <div class="text-wrapper-44">Sobre Nós</div>
-      <div class="text-wrapper-45">Portfólio</div>
-      <div class="text-wrapper-46">Contato</div>
-      <div class="text-wrapper-47">Pesquise algo...</div>
-      <img class="search" src="https://c.animaapp.com/OLJuCHk9/img/search-2@2x.png" />
-      <img class="group-22" src="https://c.animaapp.com/OLJuCHk9/img/group-48@2x.png" />
-      <img class="logo-2" src="https://c.animaapp.com/OLJuCHk9/img/logo@2x.png" />
-      <div class="rectangle-19"></div>
-    </div>
-  </body>
+    </footer>
+
+</body>
 </html>
