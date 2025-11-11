@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grifo Studio</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@500&family=Inter:wght@400;500;600;700&family=Manuale:ital,wght@0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="container container-header">
+            
+            <img src="images/14a30079f7882b9f86b6b166d82bde715a9dfd5c.png" alt="Grifo Studio Logo" class="logo">
+            
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Início</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+
+            <form class="search-bar" id="searchForm">
+                <input type="text" placeholder="Pesquise algo..." id="searchInput">
+                <button type="submit" class="search-button">
+                   <img src="images/NOME_DA_LUPA.png" alt="Pesquisar">
+                </button>
+            </form>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero searchable-section">
+            <div class="container container-hero">
+                <div class="hero-text">
+                    <h1>
+                        <span class="italic-800">Transforme </span>
+                        <span class="italic-600">sua presença digital com conteúdos poderosos</span>
+                    </h1>
+                    <div class="divider"></div>
+                    <p>Acelere o crescimento da sua marca com estratégias de conteúdo lendárias para redes sociais.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/1c49b8f74139edcb3fbde3234cd49cabeca4681b.png" alt="Transforme sua marca em algo divino">
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-nos" class="sobre-nos searchable-section">
+            <div class="container container-sobre">
+                <div class="sobre-text">
+                    <h2>SOBRE NÓS</h2>
+                    <span class="subtitle">No Grifo Studio,</span>
+                    <h3>Criamos conteúdos que falam a língua da sua audiência!</h3>
+                    <p>Sabemos que a atenção nas redes socias é valiosa e, por isso, nossa equipe se dedica a desenvolver posts, vídeos e conexões reais com a sua marca. Nossa abordagem é criativa, estratégica e orientada por resultados.</p>
+                    <a href="#contato" class="btn-primary">Saiba mais</a>
+                </div>
+                <div class="sobre-image">
+                    <img src="images/a0ce678ef42f74ace86627f88b0510617bf00e6d.jpg" alt="Studio Grifo Logo Grande">
+                </div>
+            </div>
+        </section>
+
+        <section id="compromissos" class="compromissos searchable-section">
+            <div class="container container-compromissos">
+                <div class="compromissos-image">
+                    <img src="images/82e3aef0a7e54f163f36d4c40335a6f839b2b320.jpg" alt="Estátua de um Grifo">
+                </div>
+                <div class="compromissos-list">
+                    <span class="subtitle">Por que escolher o Grifo Studio?</span>
+                    <h2>Nossos Compromissos</h2>
+                    
+                    <ul>
+                        <li>
+                            <div class="icon-box"><img src="images/ICONE_PRAZO.svg" alt="Ícone Prazo"></div>
+                            <div class="item-text">
+                                <h4>Prazo afiado</h4>
+                                <p>Trabalhamos com rapidez e eficiência</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><img src="images/ICONE_QUALIDADE.svg" alt="Ícone Qualidade"></div>
+                            <div class="item-text">
+                                <h4>Qualidade em cada detalhe</h4>
+                                <p>Temos zelo para que a sua marca seja única no mercado</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon-box"><img src="images/ICONE_AUTENTICIDADE.svg" alt="Ícone Autenticidade"></div>
+                            <div class="item-text">
+                                <h4>Autenticidade</h4>
+                                <p>Sua marca com uma identidade marcante como uma lenda</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="projetos searchable-section">
+            <div class="container">
+                <h2>NOSSOS PROJETOS LENDÁRIOS</h2>
+                <div class="gallery-grid">
+                    <img src="images/f4ce208058bd31321d292bda605437e5ed759723.png" alt="Projeto 1 - Chorar Muito">
+                    <img src="images/9d89a5e120a459246fe22a404e553bdf294e37ec.png" alt="Projeto 2 - A Cinco Passos de Você">
+                    <img src="images/1eb4d886faa1b5129bedd8da225981fb04cae90b.png" alt="Projeto 3 - Todo Esse Tempo">
+                    <img src="images/53b96da08135b6050d2bdea655d984b809c654bf.png" alt="Projeto 4 - Gostou desse post?">
+                    <img src="images/7f7f901ec980125f59c1eb32c9ff4db77c8bd995.png" alt="Projeto 5 - Beijam Garotas">
+                    <img src="images/ff84294856d050234e24ab5dc8fe48c3bcd93a8c.png" alt="Projeto 6 - Colagem de Livros">
+                    <img src="images/8b269084252b31a9606878da4ed8377765e3ea3f.png" alt="Projeto 7 - Gostou desse post? (Roxo)">
+                    
+                    <img src="images/ebec7f3f6ec32b731e6e166124d8daa18ad4660d.png" alt="Logo Grifo" class="gallery-logo">
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contato searchable-section">
+            <div class="container container-contato">
+                <div class="contato-info">
+                    <h2>FORMULÁRIO DE CONTATO</h2>
+                    <ul>
+                        <li>
+                            <div class="icon-box-contato"><img src="images/Group 1000008999.svg" alt="Ícone Praticidade"></div>
+                            <div class="item-text">
+                                <h4>Praticidade</h4>
+                                <p>Preencha o formulário ao lado para agendar uma <strong>consultoria gratuita</strong>.</p>
+                            </div>
+                        </li>
+                         <li>
+                            <div class="icon-box-contato"><img src="images/Group 1000008998.svg" alt="Ícone Agilidade"></div>
+                            <div class="item-text">
+                                <h4>Agilidade</h4>
+                                <p>Receberá o retorno da solicitação em <strong>menos de 24 horas</strong> para criar um plano personalizado para a sua marca.</p>
+                            </div>
+                        </li>
+                         <li>
+                            <div class="icon-box-contato"><img src="images/Group 1000008997.svg" alt="Ícone Vantagens"></div>
+                            <div class="item-text">
+                                <h4>Vantagens exclusivas</h4>
+                                <p>Nossa equipe se dispõe a tornar a sua marca em um projeto lendário.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contato-form">
+                    
+                    <form action="https://formspree.io/f/xqawkdna" method="POST">
+                        <div class="form-group">
+                            <label for="nome">Nome *</label>
+                            <input type="text" id="nome" name="nome" placeholder="digite o seu nome" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="email">E-mail profissional *</label>
+                            <input type="email" id="email" name="email" placeholder="digite o seu melhor e-mail" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="telefone">Telefone *</label>
+                            <input type="tel" id="telefone" name="telefone" placeholder="digite um telefone para contato" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="empresa">Empresa e cargo *</label>
+                            <input type="text" id="empresa" name="empresa" placeholder="digite para qual empresa é o projeto e qual o seu cargo" required>
+                        </div>
+                         <div class="form-group">
+                            <label for="objetivo">Objetivo do contato *</label>
+                            <input type="text" id="objetivo" name="objetivo" placeholder="Novo projeto" required>
+                        </div>
+                        <button type="submit" class="btn-submit">ENVIAR</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container container-footer">
+            <div class="footer-col-1">
+                <img src="images/Layer 2.svg" alt="Grifo Studio Logo" class="logo-footer">
+                <p>Fortalecendo a comunicação visual de nossos clientes por meio de soluções criativas que transcendem o convencional.</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/studio_grifo/" target="_blank" rel="noopener noreferrer">
+                        <img src="images/d97aebe81454611d5ae0d56d1548da57d09dbe06.png" alt="Instagram">
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="#portfolio">Portfólio</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Instagram</h4>
+                <div class="instagram-grid">
+                    <img src="images/a0ce678ef42f74ace86627f88b0510617bf00e6d.jpg" alt="Insta 1">
+                    <img src="images/cb6a15af68726c270e3fb8ddf3d78dce41e70c44.jpg" alt="Insta 2">
+                    <img src="images/442af402af163acf957979774516e46369ed76ff.jpg" alt="Insta 3">
+                    <img src="images/82e3aef0a7e54f163f36d4c40335a6f839b2b320.jpg" alt="Insta 4">
+                    <img src="images/5771372952ee02c7b436e6f9c6540b0b7d2b6c53.jpg" alt="Insta 5">
+                    <img src="images/imagem insta (1).png" alt="Insta 6">
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contatos</h4>
+                <ul>
+                    <li>
+                        <img src="images/c6c6c8a344afa9a367c7ef62dfc48699a168cc52.png" alt="Localização">
+                        <span>Fatec Carapicuíba</span>
+                    </li>
+                     <li>
+                        <img src="images/d663c9fd1f36fe33c36f6e4d9785c475f274aa28.png" alt="Email">
+                        <span>grifostudio@outlook.com</span>
+                    </li>
+                     <li>
+                        <img src="images/Vector.svg" alt="Instagram">
+                        <span>@studio_grifo</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Grifo Studio ©2025 all right reserve</p>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+
+</body>
+</html>
