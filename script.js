@@ -1,9 +1,5 @@
-// Aguarda o HTML ser carregado antes de rodar o script
 document.addEventListener('DOMContentLoaded', () => {
 
-    /* =================================== */
-    /* CÓDIGO DA BARRA DE PESQUISA (Original) */
-    /* =================================== */
     const searchForm = document.getElementById('searchForm');
     
     if (searchForm) {
@@ -31,10 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* =================================== */
-    /* NOVO CÓDIGO DO POPUP DE FORMULÁRIO  */
-    /* =================================== */
-    
     const contactForm = document.getElementById('contactForm');
     const popupOverlay = document.getElementById('popupOverlay');
     const closePopupBtn = document.getElementById('closePopupBtn');
@@ -42,14 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const popupMessage = document.getElementById('popupMessage');
 
     function showPopup(title, message) {
-        if (!popupOverlay) return; // Segurança
+        if (!popupOverlay) return;
         popupTitle.innerText = title;
         popupMessage.innerText = message;
         popupOverlay.classList.add('show');
     }
 
     function hidePopup() {
-        if (!popupOverlay) return; // Segurança
+        if (!popupOverlay) return;
         popupOverlay.classList.remove('show');
     }
 
@@ -97,9 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    /* =================================== */
-    /* NOVO CÓDIGO DO MENU HAMBÚRGUER      */
-    /* =================================== */
     const hamburgerBtn = document.querySelector('.hamburger-menu');
     const mobileNav = document.getElementById('mobileNav');
 
