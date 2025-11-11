@@ -57,7 +57,8 @@ section {
 }
 
 section > .container > h2 {
-    font-size: 63px;
+    /* [MELHORIA UX] Tipografia Fluida */
+    font-size: clamp(40px, 5vw, 63px);
     font-weight: 800;
     text-transform: uppercase;
     color: var(--cor-texto);
@@ -81,6 +82,7 @@ header {
     padding: 30px 0;
     border-bottom: 1px solid #EAEAEA;
     position: relative;
+    z-index: 100; /* Garante que o header fique acima de outro conteúdo */
 }
 
 .container-header {
@@ -94,7 +96,6 @@ header {
 }
 
 header nav {
-    /* [MUDANÇA] Cresce para tomar espaço, mas deixa espaço para busca e menu */
     flex-grow: 1; 
     margin: 0 40px;
 }
@@ -102,7 +103,7 @@ header nav ul {
     display: flex;
     list-style: none;
     gap: 40px; 
-    justify-content: center; /* Centraliza os links */
+    justify-content: center; 
 }
 
 header nav a {
@@ -111,7 +112,7 @@ header nav a {
     font-size: 28px;
     font-weight: 500;
     color: var(--cor-texto-claro);
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease, opacity 0.2s ease;
 }
 
 header nav a:hover,
@@ -126,7 +127,7 @@ header nav a.active {
     background-color: rgba(196, 196, 196, 0.50); 
     border-radius: 20px;
     padding: 5px 15px;
-    min-width: 240px; /* Largura mínima */
+    min-width: 240px; 
 }
 .search-bar input {
     border: none;
@@ -155,13 +156,13 @@ header nav a.active {
     height: 26px;
 }
 
-/* [NOVO] Estilo do Menu Hambúrguer */
 .hamburger-menu {
-    display: block; /* Visível em desktop */
+    display: none; /* Escondido em desktop */
     background: none;
     border: none;
     cursor: pointer;
-    margin-left: 20px; /* Espaço entre a busca e o menu */
+    margin-left: 20px; 
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 .hamburger-menu img {
     width: 41px; 
@@ -190,7 +191,8 @@ header nav a.active {
 }
 
 .hero-text h1 {
-    font-size: 96px; 
+    /* [MELHORIA UX] Tipografia Fluida */
+    font-size: clamp(48px, 6vw, 96px); 
     line-height: 1.2; 
     color: var(--cor-texto);
 }
@@ -221,39 +223,40 @@ header nav a.active {
     max-width: 606px; 
 }
 
-/* [ATUALIZADO] Estilos da Imagem Hero */
 .hero-image {
     flex-basis: 45%;
     position: relative; 
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--cor-primaria); /* Fundo Laranja */
-    padding: 20px; /* Espaçamento interno */
+    background-color: var(--cor-primaria); 
+    padding: 20px; 
     border-radius: 5px; 
-    min-height: 600px; /* Altura mínima */
+    min-height: 600px; 
 }
 .hero-post-image {
-    z-index: 3; /* Imagem do post na frente */
+    z-index: 3; 
     box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
-    max-width: 400px; /* Controla o tamanho do post */
+    max-width: 400px; 
 }
+
+/* [MELHORIA] Lógica para espelhar o 'asa.svg' */
 .hero-wing {
     position: absolute;
-    z-index: 2; /* Asas atrás do post */
-    width: 200px; /* Tamanho das asas */
+    z-index: 2; 
+    width: 200px; 
     top: 50%;
+    /* 'transform' movido para as classes filhas */
 }
-/* DEPOIS */
 .hero-wing.wing-left {
     left: 20px; 
     transform: translateY(-50%);
 }
-/* DEPOIS */
 .hero-wing.wing-right {
     right: 20px;
-    transform: translateY(-50%) scaleX(-1); /* <-- A MÁGICA ACONTECE AQUI */
+    transform: translateY(-50%) scaleX(-1); /* Espelha a asa direita */
 }
+
 
 /* ========================================= */
 /* 3. SEÇÃO SOBRE NÓS                        */
@@ -298,7 +301,7 @@ header nav a.active {
     padding: 20px 60px;
     border-radius: 30px; 
     box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.25); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.2s ease;
 }
 
 .btn-primary:hover {
@@ -385,7 +388,6 @@ header nav a.active {
 /* ========================================= */
 .projetos {
     background-color: var(--cor-primaria);
-    /* background-image: url('images/fundo-projetos.jpg'); */
     background-size: cover;
     background-position: center;
 }
@@ -414,35 +416,32 @@ header nav a.active {
 /* ========================================= */
 /* 6. SEÇÃO CONTATO                          */
 /* ========================================= */
-
-/* [ATUALIZADO] Fundo da seção de contato */
 .contato {
     background-color: var(--cor-fundo-secundaria); 
-    position: relative; /* Contexto para o bloco bege */
-    overflow: hidden; /* Garante que o bloco não vaze */
+    position: relative; 
+    overflow: hidden; 
 }
 .container-contato {
     display: flex;
     justify-content: space-between;
     gap: 60px;
-    position: relative; /* Contexto para o z-index */
+    position: relative; 
     z-index: 2;
 }
 
-/* [NOVO] Bloco de fundo bege */
 .contato-bg-block {
     position: absolute;
     z-index: 1;
-    left: 0; /* Alinhado à esquerda da TELA */
+    left: 0; 
     top: 0;
     height: 100%;
-    width: 50%; /* Metade da tela */
+    width: 50%; 
     background-color: rgba(240, 165, 0, 0.20);
 }
 
 .contato-info {
     flex-basis: 45%;
-    position: relative; /* Para ficar acima do bloco bege */
+    position: relative; 
     z-index: 3;
 }
 .contato-info h2 {
@@ -484,14 +483,13 @@ header nav a.active {
     color: var(--cor-texto);
 }
 
-/* [ATUALIZADO] Formulário com fundo branco */
 .contato-form {
     flex-basis: 55%;
-    padding: 40px; /* Adicionar padding */
-    background-color: var(--cor-fundo); /* Fundo branco */
+    padding: 40px; 
+    background-color: var(--cor-fundo); 
     border-radius: 10px;
     box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
-    position: relative; /* Para ficar acima do fundo */
+    position: relative; 
     z-index: 3;
 }
 .form-group {
@@ -533,12 +531,16 @@ header nav a.active {
     font-weight: 700;
     font-family: var(--fonte-corpo);
     cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.2s ease, background-color 0.2s ease;
     float: right; 
 }
 .btn-submit:hover {
     transform: translateY(-5px);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.25);
+}
+.btn-submit:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
 }
 
 
@@ -579,6 +581,9 @@ footer {
     display: flex;
     gap: 15px;
     margin-top: 30px;
+}
+.social-icons a {
+    transition: transform 0.2s ease, opacity 0.2s ease;
 }
 .social-icons a img {
     width: 44px; 
@@ -664,7 +669,7 @@ footer {
     }
     .hero-image {
         order: 1;
-        min-height: auto; /* Remove altura mínima */
+        min-height: auto; 
     }
     .hero-text .divider {
         margin: 40px auto;
@@ -686,14 +691,13 @@ footer {
         padding-left: 0;
     }
 
-    /* [ATUALIZADO] Fundo do formulário em mobile */
     .contato-bg-block {
-        width: 100%; /* Ocupa tudo no mobile */
-        height: 450px; /* Altura fixa para a parte de info */
+        width: 100%; 
+        height: 450px; 
     }
     .contato-form {
         padding: 20px;
-        margin-top: -100px; /* Sobe o formulário sobre o bloco */
+        margin-top: -100px; 
     }
     .contato-info {
         order: 1;
@@ -731,31 +735,35 @@ footer {
         padding: 0 20px;
     }
     
+    /* [MELHORIA] Lógica do menu mobile */
     header nav {
         display: none; 
     }
     .search-bar {
         display: none; 
     }
-    /* [ATUALIZADO] Mostrar hamburger em mobile */
     .hamburger-menu { 
         display: block; 
-        margin-left: 0; /* Remove margem extra */
+        margin-left: 0; 
+    }
+    
+    /* [MELHORIA] Reduz espaçamento em mobile */
+    section {
+        padding: 60px 0;
     }
     
     .hero-text h1 {
-        font-size: 60px;
+        /* A tipografia fluida (clamp) cuida do tamanho */
     }
     .hero-text .divider {
         width: 100%;
     }
-    /* [ATUALIZADO] Esconde asas em telas pequenas */
     .hero-wing {
         display: none;
     }
     .hero-image {
         padding: 0;
-        background: none; /* Remove fundo laranja */
+        background: none; 
     }
     .hero-post-image {
         max-width: 100%;
@@ -763,7 +771,7 @@ footer {
 
     section > .container > h2,
     .contato-info h2 {
-        font-size: 40px;
+        /* A tipografia fluida (clamp) cuida do tamanho */
         line-height: 1.2;
     }
 
@@ -852,6 +860,11 @@ footer .footer-col ul a:hover {
 .hero-image {
     animation: fadeInUp 0.8s ease-out 0.8s backwards;
 }
+
+/* ========================================= */
+/* 11. ESTILOS DO POPUP DE CONTATO           */
+/* ========================================= */
+
 .popup-overlay {
     position: fixed;
     top: 0;
@@ -895,4 +908,54 @@ footer .footer-col ul a:hover {
 .popup-modal .btn-primary {
     font-size: 24px;
     padding: 15px 40px;
+}
+
+/* ========================================= */
+/* 12. MENU MOBILE RESPONSIVO                */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    /* [MELHORIA] Estilo do menu "aberto" */
+    header nav {
+        position: absolute;
+        top: 100%; /* Começa abaixo do header */
+        left: 0;
+        width: 100%;
+        background-color: var(--cor-fundo);
+        border-bottom: 1px solid #EAEAEA;
+        padding: 20px;
+        z-index: -1; /* Fica atrás do header mas acima do resto */
+    }
+
+    /* [MELHORIA] Mostra o menu quando tem a classe 'active' */
+    header nav.nav-active {
+        display: block;
+    }
+
+    /* [MELHORIA] Faz os links ficarem empilhados */
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
+
+/* ========================================= */
+/* 13. FEEDBACK DE TOQUE (UX)                */
+/* ========================================= */
+
+.btn-primary:active,
+.btn-submit:active,
+.hamburger-menu:active,
+header nav a:active {
+    transform: scale(0.96); 
+    opacity: 0.8; 
+}
+
+.social-icons a:active {
+    transform: scale(0.9);
+}
+
+.popup-modal .btn-primary:active {
+    transform: scale(0.96);
 }
