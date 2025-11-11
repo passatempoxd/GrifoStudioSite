@@ -159,7 +159,7 @@
 
                 <div class="contato-form">
                     
-                    <form action="https://formspree.io/f/xqawkdna" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/xqawkdna" method="POST">
                         <div class="form-group">
                             <label for="nome">Nome *</label>
                             <input type="text" id="nome" name="nome" placeholder="digite o seu nome" required>
@@ -186,7 +186,13 @@
             </div>
         </section>
     </main>
-
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-modal">
+            <h3 id="popupTitle">Sucesso!</h3>
+            <p id="popupMessage">Sua mensagem foi enviada. Entraremos em contato em breve.</p>
+            <button id="closePopupBtn" class="btn-primary">Fechar</button>
+        </div>
+    </div>
     <footer>
         <div class="container container-footer">
             <div class="footer-col-1">
