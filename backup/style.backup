@@ -93,10 +93,16 @@ header {
     width: 243px; 
 }
 
+header nav {
+    /* [MUDANÇA] Cresce para tomar espaço, mas deixa espaço para busca e menu */
+    flex-grow: 1; 
+    margin: 0 40px;
+}
 header nav ul {
     display: flex;
     list-style: none;
     gap: 40px; 
+    justify-content: center; /* Centraliza os links */
 }
 
 header nav a {
@@ -114,13 +120,13 @@ header nav a.active {
     font-weight: 700;
 }
 
-/* [ATUALIZADO] CSS da Barra de Busca */
 .search-bar {
     display: flex;
     align-items: center;
     background-color: rgba(196, 196, 196, 0.50); 
     border-radius: 20px;
     padding: 5px 15px;
+    min-width: 240px; /* Largura mínima */
 }
 .search-bar input {
     border: none;
@@ -147,6 +153,19 @@ header nav a.active {
 .search-bar .search-button img {
     width: 26px; 
     height: 26px;
+}
+
+/* [NOVO] Estilo do Menu Hambúrguer */
+.hamburger-menu {
+    display: block; /* Visível em desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px; /* Espaço entre a busca e o menu */
+}
+.hamburger-menu img {
+    width: 41px; 
+    height: 27px;
 }
 
 
@@ -202,10 +221,39 @@ header nav a.active {
     max-width: 606px; 
 }
 
+/* [ATUALIZADO] Estilos da Imagem Hero */
 .hero-image {
     flex-basis: 45%;
+    position: relative; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-primaria); /* Fundo Laranja */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 5px; 
+    min-height: 600px; /* Altura mínima */
 }
-
+.hero-post-image {
+    z-index: 3; /* Imagem do post na frente */
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.3);
+    max-width: 400px; /* Controla o tamanho do post */
+}
+.hero-wing {
+    position: absolute;
+    z-index: 2; /* Asas atrás do post */
+    width: 200px; /* Tamanho das asas */
+    top: 50%;
+}
+/* DEPOIS */
+.hero-wing.wing-left {
+    left: 20px; 
+    transform: translateY(-50%);
+}
+/* DEPOIS */
+.hero-wing.wing-right {
+    right: 20px;
+    transform: translateY(-50%) scaleX(-1); /* <-- A MÁGICA ACONTECE AQUI */
+}
 
 /* ========================================= */
 /* 3. SEÇÃO SOBRE NÓS                        */
@@ -313,11 +361,10 @@ header nav a.active {
     align-items: center;
     flex-shrink: 0;
 }
-/* [CORRIGIDO] Tamanho do ícone aumentado */
 .icon-box img {
     width: 60px;
     height: 60px;
-    object-fit: contain; /* Garante que o ícone caiba */
+    object-fit: contain; 
 }
 
 .item-text h4 {
@@ -352,7 +399,7 @@ header nav a.active {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
-    align-items: center; /* Alinha o logo verticalmente */
+    align-items: center; 
 }
 .gallery-grid img {
     width: 100%;
@@ -367,17 +414,36 @@ header nav a.active {
 /* ========================================= */
 /* 6. SEÇÃO CONTATO                          */
 /* ========================================= */
+
+/* [ATUALIZADO] Fundo da seção de contato */
 .contato {
-    background-color: rgba(240, 165, 0, 0.20); 
+    background-color: var(--cor-fundo-secundaria); 
+    position: relative; /* Contexto para o bloco bege */
+    overflow: hidden; /* Garante que o bloco não vaze */
 }
 .container-contato {
     display: flex;
     justify-content: space-between;
     gap: 60px;
+    position: relative; /* Contexto para o z-index */
+    z-index: 2;
+}
+
+/* [NOVO] Bloco de fundo bege */
+.contato-bg-block {
+    position: absolute;
+    z-index: 1;
+    left: 0; /* Alinhado à esquerda da TELA */
+    top: 0;
+    height: 100%;
+    width: 50%; /* Metade da tela */
+    background-color: rgba(240, 165, 0, 0.20);
 }
 
 .contato-info {
     flex-basis: 45%;
+    position: relative; /* Para ficar acima do bloco bege */
+    z-index: 3;
 }
 .contato-info h2 {
     font-size: 63px; 
@@ -402,11 +468,10 @@ header nav a.active {
     align-items: center;
     flex-shrink: 0;
 }
-/* [CORRIGIDO] Tamanho do ícone aumentado */
 .icon-box-contato img {
     width: 60px;
     height: 60px;
-    object-fit: contain; /* Garante que o ícone caiba */
+    object-fit: contain; 
 }
 
 .contato-info h4 {
@@ -419,9 +484,15 @@ header nav a.active {
     color: var(--cor-texto);
 }
 
+/* [ATUALIZADO] Formulário com fundo branco */
 .contato-form {
     flex-basis: 55%;
-    padding-left: 40px;
+    padding: 40px; /* Adicionar padding */
+    background-color: var(--cor-fundo); /* Fundo branco */
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+    position: relative; /* Para ficar acima do fundo */
+    z-index: 3;
 }
 .form-group {
     margin-bottom: 25px;
@@ -504,7 +575,6 @@ footer {
     line-height: 1.5;
     max-width: 380px; 
 }
-/* [ATUALIZADO] Ícones sociais do rodapé */
 .social-icons {
     display: flex;
     gap: 15px;
@@ -557,7 +627,7 @@ footer {
     width: 81px; 
     height: 81px; 
     border-radius: 9px;
-    object-fit: cover; /* Garante que as imagens preencham o quadrado */
+    object-fit: cover; 
 }
 
 .footer-bottom {
@@ -594,6 +664,7 @@ footer {
     }
     .hero-image {
         order: 1;
+        min-height: auto; /* Remove altura mínima */
     }
     .hero-text .divider {
         margin: 40px auto;
@@ -615,9 +686,14 @@ footer {
         padding-left: 0;
     }
 
+    /* [ATUALIZADO] Fundo do formulário em mobile */
+    .contato-bg-block {
+        width: 100%; /* Ocupa tudo no mobile */
+        height: 450px; /* Altura fixa para a parte de info */
+    }
     .contato-form {
-        padding-left: 0;
-        order: 2;
+        padding: 20px;
+        margin-top: -100px; /* Sobe o formulário sobre o bloco */
     }
     .contato-info {
         order: 1;
@@ -661,12 +737,28 @@ footer {
     .search-bar {
         display: none; 
     }
+    /* [ATUALIZADO] Mostrar hamburger em mobile */
+    .hamburger-menu { 
+        display: block; 
+        margin-left: 0; /* Remove margem extra */
+    }
     
     .hero-text h1 {
         font-size: 60px;
     }
     .hero-text .divider {
         width: 100%;
+    }
+    /* [ATUALIZADO] Esconde asas em telas pequenas */
+    .hero-wing {
+        display: none;
+    }
+    .hero-image {
+        padding: 0;
+        background: none; /* Remove fundo laranja */
+    }
+    .hero-post-image {
+        max-width: 100%;
     }
 
     section > .container > h2,
@@ -719,7 +811,6 @@ footer {
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* [CORRIGIDO] Remove efeitos do logo na galeria */
 .gallery-grid img.gallery-logo {
     border: none;
     box-shadow: none;
@@ -760,4 +851,48 @@ footer .footer-col ul a:hover {
 }
 .hero-image {
     animation: fadeInUp 0.8s ease-out 0.8s backwards;
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none; /* Começa escondido */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-overlay.show {
+    display: flex; /* Mostra o popup */
+}
+
+.popup-modal {
+    background: var(--cor-fundo);
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 5px 30px rgba(0,0,0,0.2);
+    max-width: 500px;
+    margin: 20px;
+}
+
+.popup-modal h3 {
+    font-size: 40px;
+    color: var(--cor-texto);
+    margin-bottom: 15px;
+}
+
+.popup-modal p {
+    font-size: 18px;
+    color: var(--cor-texto-claro);
+    margin-bottom: 30px;
+}
+
+/* Reutiliza o estilo do botão primário, mas mais pequeno */
+.popup-modal .btn-primary {
+    font-size: 24px;
+    padding: 15px 40px;
 }
