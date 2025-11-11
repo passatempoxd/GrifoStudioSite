@@ -243,15 +243,17 @@ header nav a.active {
     z-index: 2; /* Asas atrás do post */
     width: 200px; /* Tamanho das asas */
     top: 50%;
-    transform: translateY(-50%);
 }
+/* DEPOIS */
 .hero-wing.wing-left {
     left: 20px; 
+    transform: translateY(-50%);
 }
+/* DEPOIS */
 .hero-wing.wing-right {
     right: 20px;
+    transform: translateY(-50%) scaleX(-1); /* <-- A MÁGICA ACONTECE AQUI */
 }
-
 
 /* ========================================= */
 /* 3. SEÇÃO SOBRE NÓS                        */
