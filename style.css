@@ -317,6 +317,7 @@ header nav a.active {
 .icon-box img {
     width: 60px;
     height: 60px;
+    object-fit: contain; /* Garante que o ícone caiba */
 }
 
 .item-text h4 {
@@ -351,6 +352,7 @@ header nav a.active {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    align-items: center; /* Alinha o logo verticalmente */
 }
 .gallery-grid img {
     width: 100%;
@@ -404,6 +406,7 @@ header nav a.active {
 .icon-box-contato img {
     width: 60px;
     height: 60px;
+    object-fit: contain; /* Garante que o ícone caiba */
 }
 
 .contato-info h4 {
@@ -554,6 +557,7 @@ footer {
     width: 81px; 
     height: 81px; 
     border-radius: 9px;
+    object-fit: cover; /* Garante que as imagens preencham o quadrado */
 }
 
 .footer-bottom {
