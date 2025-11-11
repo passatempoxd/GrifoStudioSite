@@ -31,6 +31,10 @@
                    <img src="images/NOME_DA_LUPA.png" alt="Pesquisar">
                 </button>
             </form>
+
+            <button class="hamburger-menu">
+                <img src="images/Group 48.svg" alt="Menu">
+            </button>
         </div>
     </header>
 
@@ -46,7 +50,10 @@
                     <p>Acelere o crescimento da sua marca com estratégias de conteúdo lendárias para redes sociais.</p>
                 </div>
                 <div class="hero-image">
-                    <img src="images/1c49b8f74139edcb3fbde3234cd49cabeca4681b.png" alt="Transforme sua marca em algo divino">
+                    <img src="images/asa.svg" class="hero-wing wing-left" alt="Asa decorativa esquerda">
+                    <img src="images/asa.svg" class="hero-wing wing-right" alt="Asa decorativa direita">
+                    
+                    <img src="images/insta.png" alt="Transforme sua marca em algo divino" class="hero-post-image">
                 </div>
             </div>
         </section>
@@ -69,7 +76,7 @@
         <section id="compromissos" class="compromissos searchable-section">
             <div class="container container-compromissos">
                 <div class="compromissos-image">
-                    <img src="images/82e3aef0a7e54f163f36d4c40335a6f839b2b320.jpg" alt="Estátua de um Grifo">
+                    <img src="images/cb6a15af68726c270e3fb8ddf3d78dce41e70c44.jpg" alt="Estátua de um Grifo">
                 </div>
                 <div class="compromissos-list">
                     <span class="subtitle">Por que escolher o Grifo Studio?</span>
@@ -121,6 +128,8 @@
 
         <section id="contato" class="contato searchable-section">
             <div class="container container-contato">
+                <div class="contato-bg-block"></div>
+
                 <div class="contato-info">
                     <h2>FORMULÁRIO DE CONTATO</h2>
                     <ul>
@@ -150,7 +159,7 @@
 
                 <div class="contato-form">
                     
-                    <form action="https://formspree.io/f/xqawkdna" method="POST">
+                    <form id="contactForm" action="https://formspree.io/f/xqawkdna" method="POST">
                         <div class="form-group">
                             <label for="nome">Nome *</label>
                             <input type="text" id="nome" name="nome" placeholder="digite o seu nome" required>
@@ -177,7 +186,13 @@
             </div>
         </section>
     </main>
-
+    <div id="popupOverlay" class="popup-overlay">
+        <div class="popup-modal">
+            <h3 id="popupTitle">Sucesso!</h3>
+            <p id="popupMessage">Sua mensagem foi enviada. Entraremos em contato em breve.</p>
+            <button id="closePopupBtn" class="btn-primary">Fechar</button>
+        </div>
+    </div>
     <footer>
         <div class="container container-footer">
             <div class="footer-col-1">
@@ -194,7 +209,7 @@
                 <h4>Serviços</h4>
                 <ul>
                     <li><a href="#">Início</a></li>
-                    <li><a href="#sobre-nos">Sobre Nós</a></li>
+                    <li><a href="#sobre-nos">Sobre nós</a></li>
                     <li><a href="#portfolio">Portfólio</a></li>
                     <li><a href="#contato">Contato</a></li>
                 </ul>
