@@ -126,6 +126,7 @@ header nav a.active {
     font-weight: 700;
 }
 
+/* [ATUALIZADO] CSS da Barra de Busca */
 .search-bar {
     display: flex;
     align-items: center;
@@ -133,22 +134,31 @@ header nav a.active {
     border-radius: 20px;
     padding: 5px 15px;
 }
-.search-bar img {
-    width: 26px; /* */
-    height: 26px;
-}
 .search-bar input {
     border: none;
     background: transparent;
     outline: none;
-    margin-left: 10px;
     font-family: var(--fonte-secundaria);
     font-size: 16px;
     color: var(--cor-texto);
+    flex-grow: 1; /* Faz o input ocupar o espaço */
 }
 .search-bar input::placeholder {
     color: var(--cor-texto-claro);
     font-size: 13px; /* */
+}
+.search-bar .search-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+}
+.search-bar .search-button img {
+    width: 26px; 
+    height: 26px;
 }
 
 
@@ -207,9 +217,6 @@ header nav a.active {
 
 .hero-image {
     flex-basis: 45%;
-    /* A imagem com as asas laranjas
-       é complexo. A imagem deve vir do Figma
-       já com o fundo laranja e as asas. */
 }
 
 
@@ -267,7 +274,6 @@ header nav a.active {
 
 .sobre-image {
     flex-basis: 45%;
-    /* A imagem com o fundo laranja deve vir pronta do Figma */
 }
 
 
@@ -286,7 +292,6 @@ header nav a.active {
 
 .compromissos-image {
     flex-basis: 45%;
-    /* A imagem com o fundo laranja deve vir pronta do Figma */
 }
 
 .compromissos-list {
@@ -344,12 +349,7 @@ header nav a.active {
 /* 5. SEÇÃO PROJETOS (PORTFOLIO)             */
 /* ========================================= */
 .projetos {
-    /* O fundo laranja vem da imagem de fundo do design */
     background-color: var(--cor-primaria);
-    /* !! SUBSTITUA A URL ABAIXO !!
-      Exporte a imagem de fundo laranja/textura da seção de projetos
-      e coloque o caminho dela aqui.
-    */
     /* background-image: url('images/fundo-projetos.jpg'); */
     background-size: cover;
     background-position: center;
@@ -514,14 +514,19 @@ footer {
     line-height: 1.5;
     max-width: 380px; /* */
 }
+/* [ATUALIZADO] Ícones sociais do rodapé */
 .social-icons {
     display: flex;
     gap: 15px;
     margin-top: 30px;
 }
-.social-icons img {
+.social-icons a img {
     width: 44px; /* */
     height: 44px;
+    transition: transform 0.3s ease;
+}
+.social-icons a:hover img {
+    transform: scale(1.1);
 }
 
 .footer-col h4 {
@@ -665,7 +670,8 @@ footer {
         display: none; /* Em telas menores, criar um menu "hambúrguer" */
     }
     .search-bar {
-        display: none; /* Simplificar o header */
+        /* Esconde a barra de busca grande */
+        display: none; 
     }
     
     .hero-text h1 {
@@ -718,51 +724,54 @@ footer {
 
 /* Efeito de zoom suave nas fotos da galeria */
 .gallery-grid img {
-    /* Adicione esta linha para suavizar a animação */
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .gallery-grid img:hover {
-    transform: scale(1.05); /* Aumenta levemente o tamanho da imagem */
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra mais forte */
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
 }
+
+/* [CORRIGIDO] Remove efeitos do logo na galeria */
+.gallery-grid img.gallery-logo {
+    border: none;
+    box-shadow: none;
+}
+.gallery-grid img.gallery-logo:hover {
+    transform: none;
+    box-shadow: none;
+}
+
 
 /* Efeito sutil nos links do rodapé */
 footer .footer-col ul a:hover {
-    color: var(--cor-primaria); /* Muda a cor para o laranja principal */
+    color: var(--cor-primaria);
 }
 
 /* ========================================= */
 /* 10. ANIMAÇÕES DE CARREGAMENTO             */
 /* ========================================= */
 
-/* 1. Defina a animação (Surgir de baixo para cima) */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px); /* Começa 20px abaixo */
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
-        transform: translateY(0); /* Termina na posição original */
+        transform: translateY(0);
     }
 }
 
-/* 2. Aplique a animação aos elementos da seção Hero */
 .hero-text h1 {
     animation: fadeInUp 0.8s ease-out 0.2s backwards;
 }
-
 .hero-text .divider {
     animation: fadeInUp 0.8s ease-out 0.4s backwards;
 }
-
 .hero-text p {
     animation: fadeInUp 0.8s ease-out 0.6s backwards;
 }
-
 .hero-image {
     animation: fadeInUp 0.8s ease-out 0.8s backwards;
 }
-
-/* 'backwards' garante que o elemento fique invisível ANTES da animação começar */
